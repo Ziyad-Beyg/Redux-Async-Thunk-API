@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+/* NAVBAR CSS */
+
+.header {
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backBtn {
+  cursor: pointer;
+}
+
+.headerH1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 42px;
+  text-align: center;
+}
+
+.cartIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.cartIcon:hover {
+  background-color: rgba(128, 128, 128, 0.224);
+  cursor: pointer;
+}
+
+.cartBadge {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.cartNum {
+  color: white;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+/* PRODUCT CSS */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 20px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background-color: white;
+}
+
+.card > img {
+  height: 200px;
+}
+
+.cardBody {
+  height: 160px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.productDesc {
+  text-align: justify;
+  font-size: 14px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.card button:active {
+  scale: 0.9;
+}
+
+/* CART CSS */
+
+.cart-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid grey;
+  justify-content: space-around;
+}
+.description {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+.img-fluid {
+  width: 150px;
+}
+.quantityh3{
+  text-align: center;
+}
+.btnDiv{
+  display: flex;
+  gap: 10px;
+}
+.updateBtn {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: none;
+  background-color: steelblue;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.updateBtn:hover {
+  opacity: 0.8;
+}
+.updateBtn:active {
+  scale: 0.9;
+}
+.quantity {
+  padding: 1rem;
+}
+.close {
+  justify-content: flex-end;
+}
+.closeBtn {
+  padding: 5px;
+}
+.closeBtn:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+.totalH1 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px 0;
+  text-align: right;
+}
+.emptyCartDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  padding: 50px;
+  text-align: center;
+}
+.emptyCartImg {
+  width: 30%;
+  min-width: 200px;
+}
+.emptyCarth2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 380px) {
+  .container {
+    padding: 50px 20px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .emptyCartDiv {
+    padding: 0px;
+  }
+  .headerH1 {
+    font-size: 34px;
+  }
+}
